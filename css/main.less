@@ -1,0 +1,91 @@
+@mainGreen:#cadb2c;
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  //background-color: #fff;
+  background-color:black!important;
+}
+#spacer{
+	background-color:black;
+	height:61px;
+}
+.start{
+	height:10px;
+	background-color:red;
+}
+#nav > div > div.navbar-collapse.collapse.in > ul li a{
+}
+#nav > div > div.navbar-collapse.collapse > ul li a{
+}
+.test{
+	//padding-top:50px;
+}
+#nav{
+	background-color:@mainGreen;
+	border-bottom:2px solid black;
+	.container{
+		background-color:yellow;
+		font-size:10px;
+		padding:0px!important;
+		text-align:center;
+		#navItems{
+			background-color:@mainGreen;
+			max-height:initial;
+			#logo{
+				padding-bottom:10px;
+				img{
+					height:30px;
+				}
+			}
+		}
+		#collapsedNavbar{
+			background-color:@mainGreen;
+			text-align:center;
+			#toggleButton{
+				position:fixed;
+				top:60px;
+				background-color:@mainGreen;
+				margin-left:15px;
+				opacity:0.8;
+				color:black;
+			}
+			#collapsedLogo{
+				width:100%;
+				padding:15px 30px 10px 20px;
+			}
+		}
+		#navItems{
+			ul{
+				li{
+					vertical-align:middle;
+					a{
+						//color:darkgreen;
+						color:black;
+						font-weight:bold;
+						height:100%;
+						display:block;
+					}
+					a:hover{
+						background-color:black;
+						color:@mainGreen;
+					}
+					a:focus{
+						background-color:black;
+						color:@mainGreen;
+					}
+				}
+			}
+			#logo{
+				padding-top:5px;
+			}
+		}
+	}
+}
+
+@media(max-width:767px){
+	#collapsedNavbar{
+
+	}
+	#logo{
+		display:none;
+	}
+}

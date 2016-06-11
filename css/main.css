@@ -1,0 +1,72 @@
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: black!important;
+}
+#spacer {
+  background-color: black;
+  height: 61px;
+}
+.start {
+  height: 10px;
+  background-color: red;
+}
+#nav {
+  background-color: #cadb2c;
+  border-bottom: 2px solid black;
+}
+#nav .container {
+  background-color: yellow;
+  font-size: 10px;
+  padding: 0px!important;
+  text-align: center;
+}
+#nav .container #navItems {
+  background-color: #cadb2c;
+  max-height: initial;
+}
+#nav .container #navItems #logo {
+  padding-bottom: 10px;
+}
+#nav .container #navItems #logo img {
+  height: 30px;
+}
+#nav .container #collapsedNavbar {
+  background-color: #cadb2c;
+  text-align: center;
+}
+#nav .container #collapsedNavbar #toggleButton {
+  position: fixed;
+  top: 60px;
+  background-color: #cadb2c;
+  margin-left: 15px;
+  opacity: 0.8;
+  color: black;
+}
+#nav .container #collapsedNavbar #collapsedLogo {
+  width: 100%;
+  padding: 15px 30px 10px 20px;
+}
+#nav .container #navItems ul li {
+  vertical-align: middle;
+}
+#nav .container #navItems ul li a {
+  color: black;
+  font-weight: bold;
+  height: 100%;
+  display: block;
+}
+#nav .container #navItems ul li a:hover {
+  background-color: black;
+  color: #cadb2c;
+}
+#nav .container #navItems ul li a:focus {
+  background-color: black;
+  color: #cadb2c;
+}
+#nav .container #navItems #logo {
+  padding-top: 5px;
+}
+@media (max-width: 767px) {
+  #logo {
+    display: none;
+  }
+}
