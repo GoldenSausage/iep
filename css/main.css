@@ -1,3 +1,14 @@
+/*
+ANIMATIONS---------------------------------
+*/
+@import url(https://fonts.googleapis.com/css?family=Oxygen);
+body span {
+  font-family: 'Comfortaa', cursive;
+}
+.container {
+  padding: 0px!important;
+  max-width: 960px;
+}
 .navbar-inverse .navbar-toggle .icon-bar {
   background-color: black!important;
 }
@@ -5,9 +16,22 @@
   background-color: black;
   height: 61px;
 }
+.spacer2 {
+  height: 50px;
+  background-color: red;
+  display: none;
+}
 .start {
   height: 10px;
   background-color: red;
+}
+.subSection {
+  padding: 50px 0px 50px 0px;
+}
+.subHeader {
+  font-size: 30px;
+  text-align: center;
+  padding: 0px 0px 30px 0px;
 }
 #nav {
   background-color: #cadb2c;
@@ -16,8 +40,8 @@
 #nav .container {
   background-color: yellow;
   font-size: 10px;
-  padding: 0px!important;
   text-align: center;
+  max-width: 960px;
 }
 #nav .container #navItems {
   background-color: #cadb2c;
@@ -65,8 +89,152 @@
 #nav .container #navItems #logo {
   padding-top: 5px;
 }
+.intro {
+  text-align: center;
+  font-weight: 200;
+  position: relative;
+}
+.intro .introText {
+  /*
+		display:block;
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);*/
+
+  font-size: 45px;
+  color: black;
+  display: block;
+  padding: 30px 0px 10px 0px;
+}
+#homeSlideshow {
+  background-color: white;
+  text-align: center;
+  padding-bottom: 30px;
+}
+#homeSlideshow .container .slideshowScreen {
+  position: relative;
+  width: 100%;
+  border-radius: 100px;
+  border: 10px solid #cadb2c;
+  overflow: hidden;
+  background-color: white;
+  z-index: 1;
+}
+#homeSlideshow .container .slideshowScreen .slideContent {
+  width: 100%;
+  border: 5px solid grey;
+  border-radius: 90px;
+  visibility: none;
+}
+#homeSlideshow .container .slideshowScreen .slideshowArrow {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  padding: 30px 20px 30px 20px;
+  transition: 0.6s ease;
+  opacity: 0.4;
+}
+#homeSlideshow .container .slideshowScreen .slideshowArrow:hover {
+  text-decoration: none;
+  background-color: black;
+  opacity: 0.7;
+}
+#homeSlideshow .container .slideshowScreen .prev {
+  left: 0%;
+  border-radius: 0px 10px 10px 0px;
+}
+#homeSlideshow .container .slideshowScreen .next {
+  right: 0%;
+  border-radius: 10px 0px 0px 10px;
+}
+#homeSlideshow .container div ul {
+  padding: 0px;
+}
+#homeSlideshow .container div ul li {
+  display: inline-block;
+  padding: 15px 5px 0px 5px;
+}
+#homeSlideshow .container div ul li .slidePicker {
+  cursor: pointer;
+  display: inline-block;
+  background-color: white;
+  border-radius: 15px;
+  height: 15px;
+  width: 15px;
+}
+.serviceCard {
+  background-color: grey;
+  display: inline-block;
+}
+.serviceCard img {
+  width: 100%;
+}
+.serviceCard .serviceCardText {
+  padding: 20px;
+  color: white;
+}
+.serviceCard .serviceCardLink {
+  height: 35px;
+  width: 100%;
+  background-color: #cadb2c;
+  font-size: 12px;
+  display: block;
+  position: relative;
+}
+.serviceCard .serviceCardLink .learnMore {
+  display: block;
+  color: grey;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*
+ANIMATIONS---------------------------------
+*/
+.fade {
+  animation-name: slideFade;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes slideFade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*
+MEDIA QUERIES--------------------------------
+*/
+@media (max-width: 991px) {
+  /*col-sm width*/
+  .intro .introText {
+    font-size: 40px;
+    padding: 25px 0px 8px 0px;
+  }
+  .serviceCard {
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 767px) {
+  /*col-xs width (mobile)*/
   #logo {
     display: none;
+  }
+  .intro .introText {
+    font-size: 28px;
+    padding: 20px 0px 5px 0px;
+  }
+  .serviceCard {
+    margin-bottom: 30px;
   }
 }
