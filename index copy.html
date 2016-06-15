@@ -24,12 +24,12 @@
 </head>
     
 
-<body ng-app="myApp">
+<body onresize="initSpacer()" ng-app="myApp">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav">
     <div class="container">
-        <!--collapsed navbar-->
-        <div class="navbar-header visible-xs header" id="collapsedNavbar">
+    	<!--collapsed navbar-->
+		<div class="navbar-header visible-xs header" id="collapsedNavbar">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="toggleButton">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -41,29 +41,29 @@
 
         <!--uncollapsed navbar-->
         <div class="collapse navbar-collapse" id="navItems">
-            <div id="logo">
-                <img src="img/iep_smaller.png" \alt>
-            </div>
+	        <div id="logo">
+	        	<img src="img/iep_smaller.png" \alt>
+	        </div>
             <ul class="nav nav-justified" style="color:black">
-                <li>
+            	<li>
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#/">ABOUT US</a>
                 </li>
-                <li>
+            	<li>
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#concert">PERFORMANCES</a>
                 </li>
-                <li>
+            	<li>
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#setproductions">SET PRODUCTIONS</a>
                 </li>
-                <li>
+            	<li>
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#performances">CONCERTS</a>
                 </li>
-                <li>
+            	<li>
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#printservices">PRINT SERVICES</a>
                 </li>
                 <li>
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#clients">CLIENTS</a>
                 </li>
-                <li>
+            	<li>
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#contactus">CONTACT US</a>
                 </li>
             </ul>
@@ -115,8 +115,8 @@
             <span style="font-size:30px">What We Do</span>
         </div>
         <div class="subSectionContent" style="text-align:center">
-            <p id="para2" style="font-size:20px">
-    Many things can go wrong when hosting public events.  Trying to garner the applaud of an audience and maintain their attention is difficult and we've all learned this the hard way.  As one of Canada's best and most reliable event organizers, Innovative Entertainment & Productions Inc. offers the most complete solution for hosting events ranging from pre-planning, expert counselling, promotion material printing, exotic cultural performances, to custom set productions in order to bring a memorable event that anyone will be delighted to attend.  We have provided our amazing services to many businesses, celebrities, as well as small private events.  Let our experts handle everything for you.  We achieve the highest standards with unparalleled customer satisfaction because we are deeply passionate in what we do.</p>
+            <span style="font-size:20px">
+    Many things can go wrong when hosting public events.  Trying to garner the applaud of an audience and maintain their attention is difficult and we've all learned this the hard way.  As one of Canada's best and most reliable event organizers, Innovative Entertainment & Productions Inc. offers the most complete solution for hosting events ranging from pre-planning, expert counselling, promotion material printing, exotic cultural performances, to custom set productions in order to bring a memorable event that anyone will be delighted to attend.  We have provided our amazing services to many businesses, celebrities, as well as small private events.  Let our experts handle everything for you.  We achieve the highest standards with unparalleled customer satisfaction because we are deeply passionate in what we do.</span>
         </div>
     </div>
 </div>
@@ -128,17 +128,17 @@
         </div>
         <div class="subSectionContent">
             <div>
-                <div class="col-md-3 col-sm-6 col-xs-12 serviceAnchor">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="serviceCard">
                         <img src="img/service_lion.jpg" style="" \alt>
                         <div class="serviceCardText">
                             <span style="font-size:16px; font-weight:bold">Entertainment</span><br><br>
                             <span style="font-size:12px">Any event can greatly benefit from our stunning performances.  From lion dances, dragon dances, martial arts, musicians, costumes, to acrobatics, we offer the best of Asian culture and tradition and performed by national award winning athletes.</span><br><br>
                         </div>
-                        <a class="serviceCardLink" href="#" onclick="test()"><span class="learnMore">LEARN MORE</span></a>
+                        <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 serviceAnchor">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="serviceCard">
                         <img src="img/service_set_production.jpg" style="" \alt>
                         <div class="serviceCardText">
@@ -148,7 +148,7 @@
                         <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 serviceAnchor">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="serviceCard">
                         <img src="img/service_consultation.jpg" style="" \alt>
                         <div class="serviceCardText">
@@ -158,7 +158,7 @@
                         <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 serviceAnchor">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="serviceCard">
                         <img src="img/service_print.jpg" style="" \alt>
                         <div class="serviceCardText">
@@ -177,32 +177,24 @@
 
 </div>
 
-<!--JAVASCRIPT===========================================-->ß
+<!--JAVASCRIPT===========================================-->
 <script>
 
 var slide, timer;
 
 initSpacer();
 initSlideShow();
-
-$(window).bind("load", function() {//wait for entire page to finish loading first, executes last
-   // code here
-   initCardHeights();
-});
-
-$( window ).resize(function() {
-    initSpacer();
-    initCardHeights();
- });
+getMaxCardHeight();
 
 //set the height of spacer to height of navigation bar
 function initSpacer(){
-    if (window.innerWidth<=767){
-        document.getElementById("spacer").style.height = document.getElementById("collapsedNavbar").offsetHeight+"px";
-    }
-    else{
-        document.getElementById("spacer").style.height = document.getElementById("nav").offsetHeight+"px";
-    }
+	if (window.innerWidth<=767){
+		console.log("less");
+		document.getElementById("spacer").style.height = document.getElementById("collapsedNavbar").offsetHeight+"px";
+	}
+	else{
+		document.getElementById("spacer").style.height = document.getElementById("nav").offsetHeight+"px";
+	}
 }
 
 //slideshow functions
@@ -252,36 +244,19 @@ function getMaxCardHeight(){
     var cards = document.getElementsByClassName("serviceCard");
     var i;
     var height=0;
-    //console.log("pre-height = " + cards[0].offsetHeight);
-    
+    console.log(cards[1].offsetHeight);
     for (i=0; i<cards.length; i++){//find the card with greatest height
-        //console.log("cards[" + i + "] = " + cards[i].offsetHeight);
-        cards[i].style.height = "auto";
+        console.log(height);
         if (height < cards[i].offsetHeight){
+            console.log("offsetheight="+cards[i].offsetHeight);
             height = cards[i].offsetHeight;
         }
     }
-    console.log("max height = " + height);
-    return height;
 }
-
-function initCardHeights(){
-    var cards = document.getElementsByClassName("serviceCard");
-    var cardLinks = document.getElementsByClassName("serviceCardLink");
-    var i;
-    var h = getMaxCardHeight()+"px";
-
-    for (i=0; i<cards.length; i++){
-        console.log("increasing? = " + h);
-        console.log("height = " + cards[i].style.height);
-        cards[i].style.height = h;
-        cardLinks[i].style.bottom="15px";
-    }
-}
-
+test();
 function test(){
-    var anchor = document.getElementsByClassName("serviceAnchor");
-    console.log("test anchor height= "+anchor[0].offsetHeight);
+    var array = (document.getElementsByClassName("serviceCard"));
+    console.log(array[0].offsetWidth);
 }
 
 //angular routing

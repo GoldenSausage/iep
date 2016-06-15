@@ -5,6 +5,9 @@ ANIMATIONS---------------------------------
 body span {
   font-family: 'Comfortaa', cursive;
 }
+body p {
+  font-family: 'Comfortaa', cursive;
+}
 .container {
   padding: 0px!important;
   max-width: 960px;
@@ -170,6 +173,8 @@ body span {
 .serviceCard {
   background-color: grey;
   display: inline-block;
+  position: relative;
+  padding-bottom: 25px;
 }
 .serviceCard img {
   width: 100%;
@@ -184,7 +189,7 @@ body span {
   background-color: #cadb2c;
   font-size: 12px;
   display: block;
-  position: relative;
+  position: absolute;
 }
 .serviceCard .serviceCardLink .learnMore {
   display: block;
