@@ -9,7 +9,6 @@ body p {
   font-family: 'Comfortaa', cursive;
 }
 .container {
-  padding: 0px!important;
   max-width: 960px;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
@@ -41,10 +40,9 @@ body p {
   border-bottom: 2px solid black;
 }
 #nav .container {
-  background-color: yellow;
   font-size: 10px;
   text-align: center;
-  max-width: 960px;
+  padding: 0px;
 }
 #nav .container #navItems {
   background-color: #cadb2c;
@@ -63,6 +61,7 @@ body p {
 #nav .container #collapsedNavbar #toggleButton {
   position: fixed;
   top: 60px;
+  left: 0px;
   background-color: #cadb2c;
   margin-left: 15px;
   opacity: 0.8;
@@ -96,6 +95,7 @@ body p {
   text-align: center;
   font-weight: 200;
   position: relative;
+  background-color: #e6e6e6;
 }
 .intro .introText {
   /*
@@ -105,29 +105,26 @@ body p {
 		left:50%;
 		transform:translate(-50%, -50%);*/
 
-  font-size: 45px;
+  font-size: 40px;
   color: black;
   display: block;
   padding: 30px 0px 10px 0px;
 }
 #homeSlideshow {
-  background-color: white;
+  background-color: black;
   text-align: center;
+  padding-top: 50px;
   padding-bottom: 30px;
 }
 #homeSlideshow .container .slideshowScreen {
   position: relative;
   width: 100%;
-  border-radius: 100px;
-  border: 10px solid #cadb2c;
   overflow: hidden;
-  background-color: white;
+  background-color: black;
   z-index: 1;
 }
 #homeSlideshow .container .slideshowScreen .slideContent {
   width: 100%;
-  border: 5px solid grey;
-  border-radius: 90px;
   visibility: none;
 }
 #homeSlideshow .container .slideshowScreen .slideshowArrow {
@@ -201,6 +198,54 @@ body p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#footer {
+  background-color: #1a1a1a;
+  color: white;
+}
+#footer .container {
+  padding: 0px 100px 0px 100px;
+}
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+#footer .footerListTitle {
+  padding-bottom: 20px;
+}
+#footer .footerListTitle span {
+  font-size: 12px;
+  font-weight: bold;
+}
+#footer .footerCol {
+  color: white;
+  padding: 0px;
+  font-size: 10px;
+  padding: 50px 10px 50px 10px;
+}
+#footer .footerList {
+  color: lightgrey;
+  display: block;
+}
+#footer .plus {
+  display: none;
+}
+#partners {
+  background-color: #737373;
+}
+#copyright {
+  height: 40px;
+  background-color: #1a1a1a;
+  position: relative;
+}
+#copyright span {
+  color: grey;
+  font-size: 10px;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 /*
 ANIMATIONS---------------------------------
 */
@@ -239,7 +284,45 @@ MEDIA QUERIES--------------------------------
     font-size: 28px;
     padding: 20px 0px 5px 0px;
   }
+  .subSection .container {
+    margin: 0px 10px 0px 10px;
+  }
+  #services .container {
+    padding: 0px;
+    margin: 0px;
+  }
   .serviceCard {
     margin-bottom: 30px;
+  }
+  #footer .container {
+    padding: 20px;
+  }
+  #footer .footerCol {
+    padding: 5px 25px 5px 25px;
+  }
+  #footer a {
+    cursor: pointer;
+  }
+  #footer .footerListTitle {
+    border-bottom: 1px solid grey;
+    padding-bottom: 0px;
+  }
+  #footer .footerListTitle span {
+    font-size: 16px;
+  }
+  #footer .footerListTitle .plus {
+    font-size: 20px;
+    float: right;
+    display: inline;
+  }
+  #footer .footerList {
+    font-size: 16px;
+    padding-left: 15px;
+  }
+  #copyright {
+    text-align: center;
+  }
+  #copyright span {
+    width: 100%;
   }
 }

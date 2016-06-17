@@ -2,6 +2,7 @@
 
 @mainGreen:#cadb2c;
 @bgColor:white;
+@offWhite:#e6e6e6;
 
 body{
 	span{
@@ -12,7 +13,6 @@ body{
 	}
 }
 .container{
-	padding:0px!important;
 	max-width:960px;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
@@ -51,10 +51,9 @@ body{
 	background-color:@mainGreen;
 	border-bottom:2px solid black;
 	.container{
-		background-color:yellow;
 		font-size:10px;
 		text-align:center;
-		max-width:960px;
+		padding:0px;
 		#navItems{
 			background-color:@mainGreen;
 			max-height:initial;
@@ -71,6 +70,7 @@ body{
 			#toggleButton{
 				position:fixed;
 				top:60px;
+				left:0px;
 				background-color:@mainGreen;
 				margin-left:15px;
 				opacity:0.8;
@@ -113,7 +113,7 @@ body{
 	text-align:center;
 	font-weight:200;
 	position:relative;
-	//background-color:darkred;
+	background-color:#e6e6e6;
 	.introText{
 		/*
 		display:block;
@@ -121,7 +121,7 @@ body{
 		top:50%;
 		left:50%;
 		transform:translate(-50%, -50%);*/
-		font-size:45px;
+		font-size:40px;
 		color:black;
 		display:block;
 		padding:30px 0px 10px 0px;
@@ -130,24 +130,25 @@ body{
 }
 
 #homeSlideshow{
-	background-color:white;
+	background-color:black;
 	//background-image:url("../img/fireworks.jpg");
 	text-align:center;
+	padding-top:50px;
 	padding-bottom:30px;
 	.container{
 		//slideshowScreen ratio: 0.5575;
 		.slideshowScreen{
 			position:relative;
 			width:100%;
-			border-radius:100px;
-			border:10px solid @mainGreen;
+			//border-radius:100px;
+			//border:2px solid black;
 			overflow:hidden;
-			background-color:white;
+			background-color:black;
 			z-index:1;
 			.slideContent{
 				width:100%;
-				border:5px solid grey;
-				border-radius:90px;
+				//border:10px solid @mainGreen;
+				//border-radius:90px;
 				visibility:none;
 			}
 			.slideshowArrow{
@@ -228,7 +229,61 @@ body{
 		}
 	}
 }
+#footer{
+	span{
+		//font-family:arial;
+	}
+	background-color:#1a1a1a;
+	color:white;
+	.container{
+		padding:0px 100px 0px 100px;
+	}
+	a{
+		color:white;
+		text-decoration:none;
+	}
+	.footerListTitle{
+		padding-bottom:20px;
+		span{
+			font-size:12px;
+			font-weight:bold;
+		}
+	}
+	.footerCol{
+		color:white;
+		padding:0px;
+		font-size:10px;
+		padding:50px 10px 50px 10px;
+	}
+	.footerList{
+		color:lightgrey;
+		display:block;
+	}
+	.plus{
+		display:none;
+	}
+}
+#partners{
+	background-color:#737373;
 
+}
+#copyright{
+	height:40px;
+	background-color:#1a1a1a;
+	position:relative;
+	.container{
+
+	}
+	span{
+		color:grey;
+		font-size:10px;
+		position:absolute;
+		display:block;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+	}
+}
 
 
 /*
@@ -271,7 +326,58 @@ MEDIA QUERIES--------------------------------
 			padding:20px 0px 5px 0px;
 		}
 	}
+	.subSection{
+		.container{
+			margin:0px 10px 0px 10px;
+			//padding:0px 50px 0px 50px;
+		}
+	}
+	#services{
+		.container{
+			padding:0px;
+			margin:0px;
+		}
+	}
 	.serviceCard{
 		margin-bottom:30px;
+	}
+	#footer{
+		.container{
+			padding:20px;
+		}
+		.footerCol{
+			//padding:25px;
+			padding:5px 25px 5px 25px;
+		}
+		a{
+			cursor:pointer;
+		}
+		.footerListTitle{
+			border-bottom:1px solid grey;
+			padding-bottom:0px;
+			span{
+				font-size:16px;
+
+			}
+			.plus{
+				font-size:20px;
+				float:right;
+				display:inline;
+			}
+
+		}
+		.footerList{			
+			font-size:16px;
+			padding-left:15px;
+		}
+	}
+	#copyright{
+		text-align:center;
+		.container{
+
+		}
+		span{
+			width:100%;
+		}
 	}
 }
