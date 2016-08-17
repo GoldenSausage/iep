@@ -1,0 +1,33 @@
+<script>
+
+initSubSectionHeights();
+/*
+var myresize = $( window ).resize(function() {//resize
+    //console.log("ent resizing");
+    if (window.innerWidth<=767){
+    }
+    if (window.innerWidth>767){
+        
+    }
+    console.log("ssh js resize");
+    initSubSectionHeights();
+ });*/
+
+    
+window.onresize = function(event) {
+    console.log("Testing");
+    initSubSectionHeights();
+}
+    
+function initSubSectionHeights(){
+    var elements = document.getElementsByClassName("subSectionContent");
+    var height, i;
+    console.log("subsectionheights run");
+    for(i=0; i<elements.length; i++){
+        elements[i].style.height = "auto";
+        height = elements[i].offsetHeight;
+        elements[i].style.height = height + "px";
+    }
+}
+
+</script>

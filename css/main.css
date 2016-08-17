@@ -3,10 +3,16 @@ ANIMATIONS---------------------------------
 */
 @import url(https://fonts.googleapis.com/css?family=Oxygen);
 body span {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Raleway', sans-serif;
 }
 body p {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Raleway', sans-serif;
+}
+body form {
+  font-family: 'Raleway', sans-serif;
+}
+body button {
+  font-family: 'Raleway', sans-serif;
 }
 .container {
   max-width: 960px;
@@ -21,23 +27,113 @@ body p {
 .spacer2 {
   height: 50px;
   background-color: red;
-  display: none;
+  display: block;
+}
+.grayscale {
+  -webkit-filter: grayscale(1);
+  z-index: -1;
+}
+.blur-1 {
+  -webkit-filter: blur(1px);
+}
+.blur-2 {
+  -webkit-filter: blur(2px);
+}
+.blur-3 {
+  -webkit-filter: blur(3px);
+}
+.blur-4 {
+  -webkit-filter: blur(4px);
+}
+.blur-5 {
+  -webkit-filter: blur(5px);
 }
 .start {
   height: 10px;
   background-color: red;
 }
 .subSection {
-  padding: 50px 0px 50px 0px;
+  padding: 50px 0px 80px 0px;
+  position: relative;
+  overflow: auto;
+}
+.subSection .backgroundImg {
+  position: relative;
+  object-fit: cover;
+  -webkit-filter: grayscale(1) blur(6px);
+  width: 100%;
+  height: 100%;
+}
+.subSection .background {
+  display: none;
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  top: -5px;
+  left: -50px;
+}
+.subSection .subSectionContent {
+  overflow: hidden;
+}
+.subSection #trueNovelty {
+  float: left;
+}
+.subSection #epicDances {
+  float: right;
+}
+.subSection #martialArts {
+  float: left;
+}
+.subSection #stunts {
+  float: right;
+}
+.subSection #mythicalRolePlays {
+  float: left;
+}
+.subSection #bands {
+  float: right;
+}
+.subSection #musicians {
+  float: left;
+}
+.subSection .subSectionImgFrame {
+  /*recommended ratio: 1.48988*/
+
+  padding: 0px;
+  height: 350px;
+  overflow: visible;
+}
+.subSection .subSectionImg {
+  max-height: 90%;
+  width: 95%;
+  box-shadow: 7px 7px 7px #6d6d6d;
+}
+.subSection .subSectionTextArea {
+  position: relative;
+  top: 50%;
+  transform: translatey(-50%);
+}
+.subSection .subSectionText {
+  font-size: 16px;
+  line-height: 200%;
+  display: block;
+  position: relative;
+  top: 50%;
+}
+#test {
+  position: relative;
+  top: 50%;
 }
 .subHeader {
   font-size: 30px;
   text-align: center;
-  padding: 0px 0px 30px 0px;
+  padding: 0px 0px 50px 0px;
 }
 #nav {
   background-color: #cadb2c;
   border-bottom: 2px solid black;
+  min-height: 0px;
 }
 #nav .container {
   font-size: 10px;
@@ -61,10 +157,10 @@ body p {
 #nav .container #collapsedNavbar #toggleButton {
   position: fixed;
   top: 60px;
-  left: 0px;
+  left: -15px;
   background-color: #cadb2c;
   margin-left: 15px;
-  opacity: 0.8;
+  opacity: 0.4;
   color: black;
 }
 #nav .container #collapsedNavbar #collapsedLogo {
@@ -93,9 +189,9 @@ body p {
 }
 .intro {
   text-align: center;
-  font-weight: 200;
+  font-weight: 100;
   position: relative;
-  background-color: #e6e6e6;
+  overflow: hidden;
 }
 .intro .introText {
   /*
@@ -106,31 +202,97 @@ body p {
 		transform:translate(-50%, -50%);*/
 
   font-size: 40px;
-  color: black;
+  font-weight: 200;
+  color: #cadb2c;
   display: block;
-  padding: 30px 0px 10px 0px;
+  padding: 50px 0px 50px 0px;
+  text-shadow: 2px 2px black;
+  z-index: 1;
+}
+.intro2 {
+  font-size: 40px;
+  font-weight: 300;
+}
+.banner {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.banner .bannerImg {
+  position: relative;
+  top: -30%;
+  left: -5%;
+  width: 110%;
+}
+.bannerImg2 {
+  object-fit: cover;
+  width: 100%;
+  height: 110%;
+  object-position: 0px -50px;
+  -webkit-filter: blur(4px) grayscale(1);
+  position: relative;
+  top: -5px;
+  display: block;
 }
 #homeSlideshow {
-  background-color: black;
   text-align: center;
-  padding-top: 50px;
   padding-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
-#homeSlideshow .container .slideshowScreen {
+#homeSlideshow #slideshowBackground {
+  border: none;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  overflow: hidden;
+}
+#homeSlideshow #slideshowBackground #slideshowBackgroundImg {
+  width: 100%;
+  height: 100%;
+}
+#homeSlideshow .container #slideTitle {
+  display: block;
+  font-size: 40px;
+  font-weight: 300;
+  color: #cadb2c;
+  padding: 30px 0px 30px 0px;
+  text-shadow: 2px 2px black;
+}
+#homeSlideshow .container #slideshowScreen {
   position: relative;
   width: 100%;
+  height: 0;
+  padding-bottom: 55.7%;
   overflow: hidden;
   background-color: black;
   z-index: 1;
 }
-#homeSlideshow .container .slideshowScreen .slideContent {
+#homeSlideshow .container #slideshowScreen .slideContent {
   width: 100%;
   visibility: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
 }
-#homeSlideshow .container .slideshowScreen .slideshowArrow {
+#homeSlideshow .container #slideshowScreen #slideText {
+  color: yellow;
+  font-size: 30px;
+  z-index: 3;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+#homeSlideshow .container #slideshowScreen .slideshowArrow {
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: #cadb2c;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -138,17 +300,19 @@ body p {
   padding: 30px 20px 30px 20px;
   transition: 0.6s ease;
   opacity: 0.4;
+  z-index: 4;
 }
-#homeSlideshow .container .slideshowScreen .slideshowArrow:hover {
+#homeSlideshow .container #slideshowScreen .slideshowArrow:hover {
   text-decoration: none;
-  background-color: black;
+  color: black;
+  background-color: #cadb2c;
   opacity: 0.7;
 }
-#homeSlideshow .container .slideshowScreen .prev {
+#homeSlideshow .container #slideshowScreen .prev {
   left: 0%;
   border-radius: 0px 10px 10px 0px;
 }
-#homeSlideshow .container .slideshowScreen .next {
+#homeSlideshow .container #slideshowScreen .next {
   right: 0%;
   border-radius: 10px 0px 0px 10px;
 }
@@ -167,11 +331,22 @@ body p {
   height: 15px;
   width: 15px;
 }
-.serviceCard {
+#whatWeDo .subSectionText {
+  text-align: center;
+}
+#whatWeDo .subSectionText span {
+  font-size: 20px;
+  line-height: 200%;
+}
+.serviceCard2 {
   background-color: grey;
+  height: 105%;
+  box-shadow: 7px 7px 5px #6d6d6d;
+}
+.serviceCard {
   display: inline-block;
   position: relative;
-  padding-bottom: 25px;
+  padding-bottom: 35px;
 }
 .serviceCard img {
   width: 100%;
@@ -246,6 +421,65 @@ body p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.clientLogo {
+  height: 210px;
+  padding: 30px 30px 30px 30px;
+  position: relative;
+}
+.clientLogo a {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.clientLogo .clientLogoPic {
+  position: relative;
+  object-fit: contain;
+  height: 70%;
+  width: 100%;
+}
+#contactText1 {
+  text-align: center;
+  font-size: 26px;
+}
+.contactForm1 {
+  text-align: center;
+  padding: 50px 0px 50px 0px;
+}
+.form1 {
+  width: 100%;
+  font-size: 14px;
+}
+.textBox1,
+.msgBox1 {
+  height: 29px;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  padding: 8px;
+  font-weight: 200;
+  font-size: 15px;
+  font-family: Verdana;
+  box-shadow: 2px 2px 5px #6d6d6d;
+  float: none;
+}
+.msgBox1 {
+  height: 100px;
+}
+.submitButton {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  width: 20%;
+  height: 50px;
+  background-color: #cadb2c;
+  border: 0px solid grey;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px #6d6d6d;
+}
+.submitButton:hover {
+  background-color: #bfd025;
+  box-shadow: 4px 4px 10px #6d6d6d;
+}
 /*
 ANIMATIONS---------------------------------
 */
@@ -269,7 +503,10 @@ MEDIA QUERIES--------------------------------
   /*col-sm width*/
   .intro .introText {
     font-size: 40px;
-    padding: 25px 0px 8px 0px;
+    padding: 25px 0px 25px 0px;
+  }
+  #homeSlideshow .container #slideTitle {
+    font-size: 40px;
   }
   .serviceCard {
     margin-bottom: 20px;
@@ -282,10 +519,50 @@ MEDIA QUERIES--------------------------------
   }
   .intro .introText {
     font-size: 28px;
-    padding: 20px 0px 5px 0px;
+    padding: 20px 0px 20px 0px;
+  }
+  #homeSlideshow .container #slideTitle {
+    font-size: 28px;
+  }
+  #whatWeDo .subSectionText {
+    text-align: center;
+  }
+  #whatWeDo .subSectionText span {
+    font-size: 15px;
+    line-height: 140%;
   }
   .subSection .container {
     margin: 0px 10px 0px 10px;
+  }
+  .subSection .container .subSectionContent {
+    overflow: visible;
+  }
+  .subSection .container .subSectionContent #trueNovelty {
+    float: left;
+  }
+  .subSection .container .subSectionContent #epicDances {
+    float: left;
+  }
+  .subSection .container .subSectionContent #martialArts {
+    float: left;
+  }
+  .subSection .container .subSectionContent #mythicalRolePlays {
+    float: left;
+  }
+  .subSection .container .subSectionContent #stunts {
+    float: left;
+  }
+  .subSection .container .subSectionContent #bands {
+    float: left;
+  }
+  .subSection .container .subSectionContent #musicians {
+    float: left;
+  }
+  .subSection .container .subSectionContent .subSectionTextArea {
+    transform: translatey(0%);
+  }
+  .subSection .container .subSectionContent .subSectionText {
+    padding: 30px 20px 30px 20px;
   }
   #services .container {
     padding: 0px;
@@ -293,6 +570,14 @@ MEDIA QUERIES--------------------------------
   }
   .serviceCard {
     margin-bottom: 30px;
+  }
+  .banner .bannerImg {
+    top: -10%;
+  }
+  .banner .bannerImg2 {
+    object-fit: cover;
+    width: 100%;
+    object-position: 0px 0px;
   }
   #footer .container {
     padding: 20px;
@@ -323,6 +608,23 @@ MEDIA QUERIES--------------------------------
     text-align: center;
   }
   #copyright span {
+    width: 100%;
+  }
+  .clientLogo {
+    height: 100px;
+    padding: 5px 5px 5px 5px;
+    position: relative;
+  }
+  .clientLogo a {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .clientLogo .clientLogoPic {
+    position: relative;
+    object-fit: contain;
+    height: 70%;
     width: 100%;
   }
 }

@@ -1,0 +1,46 @@
+
+
+<script>
+    
+initCardHeights();
+
+$( window ).resize(function() {
+    initCardHeights();
+ });
+
+//find the card height with the greatest height
+function getMaxCardHeight(){
+    var cards = document.getElementsByClassName("serviceCard");
+    var i;
+    var height=0;
+    
+    for (i=0; i<cards.length; i++){//find the card with greatest height
+        cards[i].style.height = "auto";
+        if (height < cards[i].offsetHeight){
+            height = cards[i].offsetHeight;
+        }
+    }
+    return height;
+}
+
+function initCardHeights(){
+    var cards = document.getElementsByClassName("serviceCard");
+    var cardLinks = document.getElementsByClassName("serviceCardLink");
+    var i;
+    var h = getMaxCardHeight()+"px";
+    //console.log("max height=" + h);
+    for (i=0; i<cards.length; i++){
+        cards[i].style.height = h;
+        cardLinks[i].style.bottom="25px";
+    }
+}
+
+function dirtest(){
+    console.log("dirtest executed");
+}
+
+function test(){
+    console.log("timeout tested");
+}
+
+</script>

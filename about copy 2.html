@@ -1,0 +1,139 @@
+<!--
+<div class="intro">
+    <div class="container">
+        <span class="introText">"We make your events <span style="">unforgettable</span>."</span>
+    </div>
+</div>-->
+<div cardheights></div>
+<div slideshow></div>
+
+<div id="homeSlideshow">
+    <div id="slideshowBackground" class="grayscale">
+        <img id="slideshowBackgroundImg" class="blur-5" src="" \alt>
+    </div>
+    <div class="container" id="slide-container">
+        <span id="slideTitle">We make your events <span style="">unforgettable</span>.</span>
+        <div id="slideshowScreen">
+            <span id="slideText"></span>
+            <!--<div style="height:100%; width:100%; position:absolute; background-color:white; top:0%; left:0%"></div>-->
+            <img class="slideContent fade" src="img/lion_dance_big_stage.png" \alt>
+            <img class="slideContent fade" src="img/wushu_big_stage_02.png" \alt>
+            <img class="slideContent fade" src="img/dragon_dance_01.png" \alt>
+            <a class="slideshowArrow prev" onclick="prevSlide()">&#10094;</a>
+            <a class="slideshowArrow next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <div style="">
+            <ul>
+                <li>
+                    <a class="slidePicker" onclick="showSlide(0)"></a>
+                </li>
+                <li>
+                    <a class="slidePicker" onclick="showSlide(1)"></a>
+                </li>
+                <li>
+                    <a class="slidePicker" onclick="showSlide(2)"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="subSection" id="whatwedo" style="background-color:lightgrey">
+    <div class="container">
+        <div class="subHeader">
+            <span style="">What We Do</span>
+        </div>
+        <div class="subSectionContent" style="text-align:center">
+            <span style="font-size:20px">
+    Many things can go wrong when hosting public events.  Trying to garner the applaud of an audience and maintain their attention can be extremely difficult and we've all learned this the hard way.  <span style="font-weight:10; font-style:italic; color:orangered">We believe events should be fun and exciting.&nbsp;&nbsp;</span>As one of Canada's best and most reliable event organizers, Innovative Entertainment & Productions Inc. is dedicated to achieving that by offering the most complete solution for hosting events ranging from pre-planning, expert counselling, promotion material printing, exotic cultural performances, to custom set productions in order to bring a memorable event that anyone will be delighted to attend.<br><br>
+    We have provided our amazing services to many businesses, celebrities, as well as small private events.  Let our experts handle everything for you.  We achieve the highest standards with unparalleled customer satisfaction because we are deeply passionate in what we do.</span>
+        </div>
+    </div>
+</div>
+
+<div class="subSection" id="services">
+    <div class="container">
+        <div class="subHeader">
+            <span>Services</span>
+        </div>
+        <div class="subSectionContent">
+            <div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="serviceCard">
+                        <img src="img/service_lion.jpg" style="" \alt>
+                        <div class="serviceCardText">
+                            
+                        </div>
+                        <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="serviceCard">
+                        <img src="img/service_set_production.jpg" style="" \alt>
+                        <div class="serviceCardText">
+                            
+                        </div>
+                        <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="serviceCard">
+                        <img src="img/service_consultation.jpg" style="" \alt>
+                        <div class="serviceCardText">
+                            
+                        </div>
+                        <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="serviceCard">
+                        <img src="img/service_print.jpg" style="" \alt>
+                        <div class="serviceCardText">
+                            
+                        </div>
+                        <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+
+initSpacer();
+
+
+//console.log("about load ok");
+
+/*
+$(window).bind("load", function() {//wait for entire page to finish loading first, executes last
+});*/
+
+$( window ).resize(function() {
+    
+    
+    
+ });
+
+//set the height of spacer to height of navigation bar
+function initSpacer(){
+    if (window.innerWidth<=767){
+        document.getElementById("spacer").style.height = document.getElementById("collapsedNavbar").offsetHeight+"px";
+    }
+    else{
+        document.getElementById("spacer").style.height = document.getElementById("nav").offsetHeight+"px";
+    }
+}
+
+
+
+
+function test(){
+    console.log(window.innerWidth);
+}
+
+
+</script>

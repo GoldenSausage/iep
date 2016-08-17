@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app="myApp">
 <head>
     <title>Innovative Entertainment & Productions</title>
 
@@ -12,23 +12,26 @@
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,900italic,900,800italic,800,700italic,700,600italic,600,500italic,500,400italic,100,100italic,200,200italic,300,300italic' rel='stylesheet' type='text/css'>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     
-    <script src="js/bootstrap.js"></script>
+    
+    
     <script src="js/main.js"></script>
+    
     
 </head>
     
 
-<body ng-app="myApp">
+<body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav">
-    <div class="container">
+    <div class="container" id="containerId">
         <!--collapsed navbar-->
         <div class="navbar-header visible-xs header" id="collapsedNavbar">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="toggleButton">
@@ -50,25 +53,22 @@
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#/">ABOUT</a>
                 </li>
                 <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#concert">ENTERTAINMENT</a>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#entertainment">ENTERTAINMENT</a>
                 </li>
                 <li>
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#setproductions">SET PRODUCTIONS</a>
                 </li>
                 <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#performances">CONSULTATION</a>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#consultation">CONSULTATION</a>
                 </li>
                 <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#printservices">PRINTING</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#clients">GALLERY</a>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#printing">PRINTING</a>
                 </li>
                 <li>
                     <a data-toggle="collapse" data-target=".navbar-collapse" href="#clients">CLIENTS</a>
                 </li>
                 <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#contactus">CONTACT</a>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#contact">CONTACT</a>
                 </li>
             </ul>
         </div>
@@ -78,104 +78,9 @@
 </nav>
 
 <div id="spacer"></div>
-<div class="spacer2"></div>
+<div hello></div>
 
-
-<div class="intro">
-    <div class="container">
-        <span class="introText">We make your events <span style="font-style:italic">unforgettable</span>.</span>
-    </div>
-</div>
-
-<div id="homeSlideshow">
-    <div class="container">
-        <div class="slideshowScreen">
-            <!--<div style="height:100%; width:100%; position:absolute; background-color:white; top:0%; left:0%"></div>-->
-            <img class="slideContent fade" src="img/lion_dance_big_stage.png" \alt>
-            <img class="slideContent fade" src="img/wushu_big_stage_02.png" \alt>
-            <img class="slideContent fade" src="img/dragon_dance_01.png" \alt>
-            <a class="slideshowArrow prev" onclick="prevSlide()">&#10094;</a>
-            <a class="slideshowArrow next" onclick="nextSlide()">&#10095;</a>
-        </div>
-        <div style="">
-            <ul>
-                <li>
-                    <a class="slidePicker" onclick="showSlide(0)"></a>
-                </li>
-                <li>
-                    <a class="slidePicker" onclick="showSlide(1)"></a>
-                </li>
-                <li>
-                    <a class="slidePicker" onclick="showSlide(2)"></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="subSection" id="whatwedo" style="background-color:lightgrey">
-    <div class="container">
-        <div class="subHeader">
-            <span style="">What We Do</span>
-        </div>
-        <div class="subSectionContent" style="text-align:center">
-            <span style="font-size:20px">
-    Many things can go wrong when hosting public events.  Trying to garner the applaud of an audience and maintain their attention can be extremely difficult and we've all learned this the hard way.  <span style="font-weight:10; font-style:italic; color:orangered">We believe events should be fun and exciting.&nbsp;&nbsp;</span>As one of Canada's best and most reliable event organizers, Innovative Entertainment & Productions Inc. is dedicated to achieving that by offering the most complete solution for hosting events ranging from pre-planning, expert counselling, promotion material printing, exotic cultural performances, to custom set productions in order to bring a memorable event that anyone will be delighted to attend.<br><br>
-    We have provided our amazing services to many businesses, celebrities, as well as small private events.  Let our experts handle everything for you.  We achieve the highest standards with unparalleled customer satisfaction because we are deeply passionate in what we do.</span>
-        </div>
-    </div>
-</div>
-
-<div class="subSection" id="services">
-    <div class="container">
-        <div class="subHeader">
-            <span>Services</span>
-        </div>
-        <div class="subSectionContent">
-            <div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="serviceCard">
-                        <img src="img/service_lion.jpg" style="" \alt>
-                        <div class="serviceCardText">
-                            <span style="font-size:16px; font-weight:bold">Entertainment</span><br><br>
-                            <span style="font-size:12px">Any event can greatly benefit from our stunning performances.  From lion dances, dragon dances, martial arts, musicians, costumes, to acrobatics, we offer the best of Asian culture and tradition and performed by national award winning athletes.</span><br><br>
-                        </div>
-                        <a class="serviceCardLink" href="#" onclick="test()"><span class="learnMore">LEARN MORE</span></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="serviceCard">
-                        <img src="img/service_set_production.jpg" style="" \alt>
-                        <div class="serviceCardText">
-                            <span style="font-size:16px; font-weight:bold">Set Production</span><br><br>
-                            <span style="font-size:12px">We either use our extensive collection of props or create new ones from ground up.  We also build stages or any set piece required to deliver the intended effect to the audience.</span><br><br>
-                        </div>
-                        <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="serviceCard">
-                        <img src="img/service_consultation.jpg" style="" \alt>
-                        <div class="serviceCardText">
-                            <span style="font-size:16px; font-weight:bold">Consultation</span><br><br>
-                            <span style="font-size:12px">Our highly experienced team of experts will provide expert advice and guide you through the entire process.  We ensure that everything will go smoothly as planned and that nothing will get left out.</span><br><br>
-                        </div>
-                        <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="serviceCard">
-                        <img src="img/service_print.jpg" style="" \alt>
-                        <div class="serviceCardText">
-                            <span style="font-size:16px; font-weight:bold">Printing</span><br><br>
-                            <span style="font-size:12px">We handle all of your promotional material needs.  Posters, cards, advertisements, window printing, banners, and more will be professionally produced.</span><br><br>
-                        </div>
-                        <a class="serviceCardLink" href="#"><span class="learnMore">LEARN MORE</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div ng-view>
 </div>
 
 <div id="footer">
@@ -250,17 +155,17 @@
     </div>
 </div>
 
-<!--JAVASCRIPT===========================================-->
+
+
 <script>
-
-var slide, timer;
-
+console.log("index.html");
 initSpacer();
-initSlideShow();
 
 $(window).bind("load", function() {//wait for entire page to finish loading first, executes last
    // code here
-   initCardHeights();
+   //initCardHeights();
+   //initSpacer();
+   console.log("index load ok");
    if (window.innerWidth<=767){
         initMobileFooter();
     }
@@ -269,7 +174,7 @@ $(window).bind("load", function() {//wait for entire page to finish loading firs
     }
 });
 
-$( window ).resize(function() {
+$( window ).resize(function() {//resize
     initSpacer();
     initCardHeights();
     if (window.innerWidth<=767){
@@ -277,91 +182,37 @@ $( window ).resize(function() {
     }
     if (window.innerWidth>767){
         initStandardFooter();
+        console.log("Test");
+        initSubSectionHeights();
     }
-
  });
+
+
+$(document).scroll(function() { 
+
+    if($(window).scrollTop() === 0) {
+        console.log("top");
+        document.getElementById("logo").style.display="block";
+        document.getElementById("nav").style.opacity="1";
+        initSpacer();
+    }
+    else{
+        document.getElementById("logo").style.display="none";
+        document.getElementById("nav").style.border="none";
+        document.getElementById("nav").style.opacity="0.7";
+    }
+});
 
 //set the height of spacer to height of navigation bar
 function initSpacer(){
+
     if (window.innerWidth<=767){
         document.getElementById("spacer").style.height = document.getElementById("collapsedNavbar").offsetHeight+"px";
     }
     else{
         document.getElementById("spacer").style.height = document.getElementById("nav").offsetHeight+"px";
     }
-}
-
-//slideshow functions
-function initSlideShow(){
-    slide=0;
-    showSlide(slide);
-}
-function prevSlide(){
-
-    if (slide==0){
-        slide = (document.getElementsByClassName("slideContent").length) - 1;
-    }
-    else{
-        slide = slide - 1;
-    }
-    showSlide(slide);
-}
-function nextSlide(){
-    if (slide == (document.getElementsByClassName("slideContent").length - 1)){
-        slide = 0;
-    }
-    else{
-        slide++;
-    }
-    showSlide(slide);
-}
-function showSlide(n){
-    clearTimeout(timer);
-    var i;
-    var slides = document.getElementsByClassName("slideContent");
-    var dots = document.getElementsByClassName("slidePicker");
-
-    slide=n;//re-sync values of slide and n (values may differ when user skips to a certain slide using slide selectors)
-    for (i=0; i<slides.length; i++){
-        slides[i].style.display="none";
-        dots[i].style.backgroundColor="grey";
-        dots[i].style.border="none"
-    }
-    slides[n].style.display="block";
-    dots[n].style.backgroundColor="#cadb2c";
-    dots[n].style.border="3px solid grey"
-    timer = setTimeout(nextSlide, 5000);
-}
-
-//find the card height with the greatest height
-function getMaxCardHeight(){
-    var cards = document.getElementsByClassName("serviceCard");
-    var i;
-    var height=0;
-    
-    for (i=0; i<cards.length; i++){//find the card with greatest height
-        cards[i].style.height = "auto";
-        if (height < cards[i].offsetHeight){
-            height = cards[i].offsetHeight;
-        }
-    }
-    return height;
-}
-
-function initCardHeights(){
-    var cards = document.getElementsByClassName("serviceCard");
-    var cardLinks = document.getElementsByClassName("serviceCardLink");
-    var i;
-    var h = getMaxCardHeight()+"px";
-
-    for (i=0; i<cards.length; i++){
-        cards[i].style.height = h;
-        cardLinks[i].style.bottom="15px";
-    }
-}
-
-function test(){
-    console.log(window.innerWidth);
+    //console.log(document.getElementById("spacer").offsetHeight);
 }
 
 //collapse or expand mobile footers
@@ -398,21 +249,12 @@ function toggleFooterList(id){
         document.getElementById(id).style.display="none";
     }
 }
-
-//angularJS routing
-var app = angular.module("myApp", ["ngRoute"]);
-app.config(function($routeProvider){
-    $routeProvider
-    .when("/",{
-        templateUrl:"main.html"
-    })
-    .when("/aboutus", {
-        templateUrl:"aboutus.html"
-    })
-});
-
+function test(){
+    console.log("scrolled");
+}
 
 </script>
+
 
 </body>
 
