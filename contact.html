@@ -7,24 +7,46 @@
 	</div>
 </div>
 
-<div class="subSection" style="background-color:#e6e6e6">
+<div class="subSection" id="contactPage" style="background-color:#e6e6e6">
 	<div class="container">
 		<div class="col-md-12 col-sm-12 col-xs-12" id="contactText1">
 			<span>Ready to work together?  We would love to hear from you!  Drop us a message if you are interested in our services to discuss in more detail!</span>
 		</div>
 		<div class="col-md-12 col-sm-12 col-xs-12 contactForm1">
             <form class="form1" action="email.php" method="POST">
-                Your Name:<br>
+                Name<br>
                 <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="name"><br><br>
-                Your Subject<br>
+                Subject<br>
                 <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="subject"><br><br>
-                Your E-mail:<br>
+                Your E-mail<br>
                 <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="email"><br><br>
-                Message:<br>
+                Message<br>
                 <textarea class="col-md-4 col-sm-5 col-xs-12 msgBox1" type="text" name = "message"></textarea><br><br><br>
                 <button class="submitButton">Send</button>
 
             </form>
         </div>
+        <div class="contactInfo col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <span>Innovative Entertainment & Productions Inc.<br></span>
+                <span>2370 Midland Avenue, Unit B22-25<br></span>
+                <span>Toronto, Ontario, Canada<br></span>
+                <span>M1S 5C6<br></span>
+                <span>Phone: (416) 801-5614<br></span>
+                <span>Email: alan@iepmedia.com</span>
+            </div>
+        </div>
 	</div>
 </div>
+
+<script>
+    
+    removeFooter();
+    
+    function removeFooter(){
+        var footer = document.getElementById("footer");
+        footer.style.display="none";
+        console.log("footer removed");
+    }
+    
+</script>

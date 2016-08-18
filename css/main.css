@@ -375,34 +375,50 @@ body button {
 }
 #footer {
   background-color: #1a1a1a;
-  color: white;
+  color: lightgrey;
 }
 #footer .container {
-  padding: 0px 100px 0px 100px;
+  padding: 50px 0px 30px 0px;
 }
-#footer a {
-  color: white;
-  text-decoration: none;
+#footer #contactText1 {
+  color: #cadb2c;
+  text-align: center;
+  font-size: 26px;
 }
-#footer .footerListTitle {
-  padding-bottom: 20px;
+#footer .contactForm1 {
+  text-align: center;
+  padding: 50px 0px 50px 0px;
 }
-#footer .footerListTitle span {
-  font-size: 12px;
+#footer .form1 {
+  width: 100%;
+  font-size: 14px;
+}
+#footer .textBox1,
+#footer .msgBox1 {
+  height: 29px;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+  padding: 8px;
+  font-weight: 200;
+  font-size: 15px;
+  font-family: Verdana;
+  float: none;
+}
+#footer .msgBox1 {
+  height: 100px;
+}
+#footer .submitButton {
+  color: black;
+  font-size: 16px;
   font-weight: bold;
+  width: 20%;
+  height: 50px;
+  background-color: #cadb2c;
+  border: 0px solid grey;
+  border-radius: 4px;
 }
-#footer .footerCol {
-  color: white;
-  padding: 0px;
-  font-size: 10px;
-  padding: 50px 10px 50px 10px;
-}
-#footer .footerList {
-  color: lightgrey;
-  display: block;
-}
-#footer .plus {
-  display: none;
+#footer .submitButton:hover {
+  background-color: #bfd025;
 }
 #partners {
   background-color: #737373;
@@ -438,20 +454,20 @@ body button {
   height: 70%;
   width: 100%;
 }
-#contactText1 {
+#contactPage #contactText1 {
   text-align: center;
   font-size: 26px;
 }
-.contactForm1 {
+#contactPage .contactForm1 {
   text-align: center;
   padding: 50px 0px 50px 0px;
 }
-.form1 {
+#contactPage .form1 {
   width: 100%;
   font-size: 14px;
 }
-.textBox1,
-.msgBox1 {
+#contactPage .textBox1,
+#contactPage .msgBox1 {
   height: 29px;
   border-radius: 3px;
   border: 1px solid #CCC;
@@ -462,10 +478,10 @@ body button {
   box-shadow: 2px 2px 5px #6d6d6d;
   float: none;
 }
-.msgBox1 {
+#contactPage .msgBox1 {
   height: 100px;
 }
-.submitButton {
+#contactPage .submitButton {
   color: black;
   font-size: 16px;
   font-weight: bold;
@@ -476,9 +492,14 @@ body button {
   border-radius: 4px;
   box-shadow: 2px 2px 5px #6d6d6d;
 }
-.submitButton:hover {
+#contactPage .submitButton:hover {
   background-color: #bfd025;
   box-shadow: 4px 4px 10px #6d6d6d;
+}
+.contactInfo {
+  color: grey;
+  padding: 50px 0px 0px 0px;
+  text-align: center;
 }
 /*
 ANIMATIONS---------------------------------

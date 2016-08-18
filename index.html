@@ -85,70 +85,27 @@
 
 <div id="footer">
     <div class="container">
-        <div>
-            <div class="col-md-3 col-sm-3 col-xs-12 footerCol">
-                <a onclick="toggleFooterList('footerCompany')">
-                    <div  class="footerListTitle">
-                        <span>Company</span><span class="plus">+</span>
-                    </div>
-                </a>
-                <div class="footerList" id="footerCompany">
-                    <span>Team</span><br>
-                    <span>Acrobatics</span><br>
-                    <span>Dance Troupe</span><br>
-                    <span>Musicians</span><br>
-                    <span>Careers</span><br>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 footerCol">
-                <a onclick="toggleFooterList('footerServices')">
-                    <div  class="footerListTitle">
-                        <span>Services</span><span class="plus">+</span>
-                    </div>
-                </a>
-                <div class="footerList" id="footerServices">
-                    <span>Entertainment</span><br>
-                    <span>Set Production</span><br>
-                    <span>Consultation</span><br>
-                    <span>Printing</span><br>
-                    <span>Terms and Agreement</span><br>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 footerCol">
-                <a onclick="toggleFooterList('footerAch')">
-                    <div class="footerListTitle">
-                        <span>Achievements</span><span class="plus">+</span>
-                    </div>
-                </a>
-                <div class="footerList"  id="footerAch">
-                    <span>Awards</span><br>
-                    <span>Competitions</span><br>
-                    <span>Qualifications</span><br>
-                    <span>International</span><br>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12 footerCol">
-                <a onclick="toggleFooterList('footerAff')">
-                    <div class="footerListTitle">
-                        <span>Affiliations</span><span class="plus">+</span>
-                    </div>
-                </a>
-                <div class="footerList"  id="footerAff">
-                    <span>Sunny Tang Martial Arts Centre</span><br>
-                    <span>Wushu Canada</span><br>
-                    <span>International Wushu Federation</span><br>
-                    <span>Bentoreno Arts</span><br>
-                </div>
-            </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" id="contactText1">
+			<span>- Get in touch with us! -</span>
+		</div>
+        <div class="col-md-12 col-sm-12 col-xs-12 contactForm1">
+            <form class="form1" action="email.php" method="POST">
+                Name<br>
+                <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="name"><br><br>
+                Subject<br>
+                <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="subject"><br><br>
+                Your E-mail<br>
+                <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="email"><br><br>
+                Message<br>
+                <textarea class="col-md-4 col-sm-5 col-xs-12 msgBox1" type="text" name = "message"></textarea><br><br><br>
+                <button class="submitButton">Send</button>
+
+            </form>
         </div>
     </div>
 
 </div>
-<div id="partners">
-    <div class="container">
 
-    </div>
-</div>
 <div id="copyright">
     <div class="container">
         <span>Innovative Entertainment & Productions Inc. Copyright 2012</span>
@@ -249,6 +206,13 @@ function toggleFooterList(id){
         document.getElementById(id).style.display="none";
     }
 }
+    
+function addFooter(){
+    var footer = document.getElementById("footer");
+    footer.style.display="block";
+    console.log("footer added");
+}
+    
 function test(){
     console.log("scrolled");
 }
