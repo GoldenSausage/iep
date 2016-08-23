@@ -104,6 +104,43 @@ body button {
   height: 350px;
   overflow: visible;
 }
+.subSection .subSectionGalleryFrame {
+  padding: 0px;
+  height: 350px;
+  overflow: visible;
+}
+.subSection .subSectionGalleryImageFrame {
+  height: 85%;
+  width: 85%;
+  border: 4px solid black;
+  overflow: visible;
+  position: absolute;
+  z-index: auto;
+  box-shadow: 0px 0px 50px white;
+}
+.subSection .subSectionGalleryImage {
+  position: relative;
+  z-index: auto;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.subSection .subSectionGalleryNav {
+  height: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.subSection .subSectionGalleryNavButton:hover {
+  cursor: pointer;
+}
+.subSection .subSectionGalleryNavArrows {
+  height: 100%;
+  position: relative;
+  padding: 0px 10px 0px 10px;
+  vertical-align: baseline;
+}
 .subSection .subSectionImg {
   max-height: 90%;
   width: 95%;
