@@ -1,0 +1,67 @@
+
+<script>
+
+var slide, timer;
+
+initSlideShow();
+//adjustSlideHeight();
+
+$( window ).resize(function() {
+    
+    //adjustSlideHeight();
+    
+ });
+
+
+//slideshow functions
+/*
+function adjustSlideHeight(){
+    var w = document.getElementById("containerId").offsetWidth;
+    console.log("width = " + w);
+    document.getElementById("slideshowScreen").style.height = (document.getElementById("containerId").offsetWidth * 0.557) + "px";
+}*/
+
+function initSlideShow(){
+    slide=0;
+    showSlide(slide);
+}
+function prevSlide(){
+
+    if (slide==0){
+        slide = (document.getElementsByClassName("slideContent").length) - 1;
+    }
+    else{
+        slide = slide - 1;
+    }
+    showSlide(slide);
+}
+function nextSlide(){
+    if (slide == (document.getElementsByClassName("slideContent").length - 1)){
+        slide = 0;
+    }
+    else{
+        slide++;
+    }
+    showSlide(slide);
+}
+function showSlide(n){
+    clearTimeout(timer);
+    var i;
+    var slides = document.getElementsByClassName("slideContent");
+    var dots = document.getElementsByClassName("slidePicker");
+
+    slide=n;//re-sync values of slide and n (values may differ when user skips to a certain slide using slide selectors)
+    for (i=0; i<slides.length; i++){
+        slides[i].style.display="none";
+        dots[i].style.backgroundColor="grey";
+        dots[i].style.border="none";
+    }
+    
+    slides[n].style.display="block";
+    document.getElementById("slideshowBackgroundImg").src=""+slides[n].src;
+    dots[n].style.backgroundColor="#cadb2c";
+    dots[n].style.border="2px solid grey";
+    timer = setTimeout(nextSlide, 5000);
+}
+
+</script>

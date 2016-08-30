@@ -7,17 +7,7 @@
 	</div>
 </div>
 
-<div>
-    <div>
-    </div>
-    
-    <div class="container">
-    
-    </div>
-
-</div>
-
-<div class="subSection" style="display:none">
+<div class="subSection">
 	<div class="container">
 		<div class="subHeader">
 			<span>Novel Experiences</span>
@@ -109,25 +99,8 @@
 			<span>Stunts</span>
 		</div>
 		<div class="subSectionContent">
-			<div class="col-md-6 col-sm-6 col-xs-12 subSectionGalleryFrame" id="stunts">
-				<div class="subSectionGalleryImageFrame stuntsImageFrames">
-				    <img class="subSectionGalleryImage danceImages" src="img/stand_stunt.png" \alt>
-                </div>
-                <div class="subSectionGalleryImageFrame stuntsImageFrames">
-                    <img class="subSectionGalleryImage danceImages" src="img/duo_dance.jpg" \alt>
-                </div>
-                <div class="subSectionGalleryImageFrame stuntsImageFrames">
-                    <img class="subSectionGalleryImage danceImages" src="img/wushu_big_stage_01.png" \alt>
-                </div>
-                
-                <div class="subSectionGalleryNav">
-                    <a class="subSectionGalleryNavButton" onclick="rotateImages(stuntsImages, 'prev')">
-                        <img class="subSectionGalleryNavArrows" src="img/left.png" \alt>
-                    </a>
-                    <a class="subSectionGalleryNavButton" onclick="rotateImages(stuntsImages, 'next')">
-                        <img class="subSectionGalleryNavArrows" src="img/right.png" \alt>
-                    </a>
-                </div>
+			<div class="col-md-6 col-sm-6 col-xs-12 subSectionImgFrame" id="stunts">
+				<img class="subSectionImg" src="img/stand_stunt.png" \alt="">
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12 subSectionTextArea">
 				<span class="subSectionText" style="float:right">Nothing captures the spirit of Wushu like the inclusion of fast paced stunt action.  Our athletes are well versed in complex olympic acrobatics that...[incomplete].</span>
@@ -142,25 +115,8 @@
 			<span>Mythical Role Plays</span>
 		</div>
 		<div class="subSectionContent">
-			<div class="col-md-6 col-sm-6 col-xs-12 subSectionGalleryFrame" id="mythicalRolePlays">
-				<div class="subSectionGalleryImageFrame roleplayImageFrames">
-				    <img class="subSectionGalleryImage danceImages" src="img/role_play.jpg" \alt>
-                </div>
-                <div class="subSectionGalleryImageFrame roleplayImageFrames">
-                    <img class="subSectionGalleryImage danceImages" src="img/role_play_02.jpg" \alt>
-                </div>
-                <div class="subSectionGalleryImageFrame roleplayImageFrames">
-                    <img class="subSectionGalleryImage danceImages" src="img/role_play_03.jpg" \alt>
-                </div>
-                
-                <div class="subSectionGalleryNav">
-                    <a class="subSectionGalleryNavButton" onclick="rotateImages(roleplayImages, 'prev')">
-                        <img class="subSectionGalleryNavArrows" src="img/left.png" \alt>
-                    </a>
-                    <a class="subSectionGalleryNavButton" onclick="rotateImages(roleplayImages, 'next')">
-                        <img class="subSectionGalleryNavArrows" src="img/right.png" \alt>
-                    </a>
-                </div>
+			<div class="col-md-6 col-sm-6 col-xs-12 subSectionImgFrame" id="mythicalRolePlays">
+				<img class="subSectionImg" src="img/role_play.png" \alt>
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12 subSectionTextArea">
 				<span class="subSectionText" style="float:right">Nothing engages audiences more than personal one on one interactions with our performers.  Our role players of Gods based on Chinese mythology will interact with audiences and take photos with them.  This is the perfect relaxing time for both children and adults to have fun and bring back cool photographic memories.</span>
@@ -175,25 +131,8 @@
 			<span>Music Bands</span>
 		</div>
 		<div class="subSectionContent">
-			<div class="col-md-6 col-sm-6 col-xs-12 subSectionGalleryFrame" id="bands">
-				<div class="subSectionGalleryImageFrame bandsImageFrames">
-				    <img class="subSectionGalleryImage danceImages" src="img/band.jpg" \alt>
-                </div>
-                <div class="subSectionGalleryImageFrame bandsImageFrames">
-                    <img class="subSectionGalleryImage danceImages" src="img/band_02.jpg" \alt>
-                </div>
-                <div class="subSectionGalleryImageFrame bandsImageFrames">
-                    <img class="subSectionGalleryImage danceImages" src="img/band_03.jpg" \alt>
-                </div>
-                
-                <div class="subSectionGalleryNav">
-                    <a class="subSectionGalleryNavButton" onclick="rotateImages(bandsImages, 'prev')">
-                        <img class="subSectionGalleryNavArrows" src="img/left.png" \alt>
-                    </a>
-                    <a class="subSectionGalleryNavButton" onclick="rotateImages(bandsImages, 'next')">
-                        <img class="subSectionGalleryNavArrows" src="img/right.png" \alt>
-                    </a>
-                </div>
+			<div class="col-md-6 col-sm-6 col-xs-12 subSectionImgFrame" id="bands">
+				<img class="subSectionImg" src="img/band.jpg" \alt="">
 			</div>
 			<div class="col-md-6 col-sm-6 col-xs-12 subSectionTextArea">
 				<span class="subSectionText" style="float:right">Although not as exotic as other entertainment options, everybody loves to have a mini concert with live singers, musicians, and DJs performing their favorite tracks...incomplete.</span>
@@ -212,9 +151,6 @@
     var shift = 15, rep=10;
     var danceImages = document.getElementsByClassName("danceImageFrames");
     var martialImages = document.getElementsByClassName("martialImageFrames");
-    var stuntsImages = document.getElementsByClassName("stuntsImageFrames");
-    var roleplayImages = document.getElementsByClassName("roleplayImageFrames");
-    var bandsImages = document.getElementsByClassName("bandsImageFrames");
     var z=1;
     
     initGalleries();
@@ -328,14 +264,8 @@
     function initGalleries(){
         setGalleryImageCoord(danceImages);
         setGalleryImageCoord(martialImages);
-        setGalleryImageCoord(stuntsImages);
-        setGalleryImageCoord(roleplayImages);
-        setGalleryImageCoord(bandsImages);
         setZ(danceImages);
         setZ(martialImages);
-        setZ(stuntsImages);
-        setZ(roleplayImages);
-        setZ(bandsImages);
         
     }
     

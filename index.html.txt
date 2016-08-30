@@ -1,0 +1,227 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="myApp">
+<head>
+    <title>Innovative Entertainment & Productions</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,900italic,900,800italic,800,700italic,700,600italic,600,500italic,500,400italic,100,100italic,200,200italic,300,300italic' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    
+    
+    
+    <script src="js/main.js"></script>
+    
+    
+</head>
+    
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav">
+    <div class="container" id="containerId">
+        <!--collapsed navbar-->
+        <div class="navbar-header visible-xs header" id="collapsedNavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="toggleButton">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img src="img/iep_smaller.png" id="collapsedLogo" \alt>
+        </div>
+
+        <!--uncollapsed navbar-->
+        <div class="collapse navbar-collapse" id="navItems">
+            <div id="logo">
+                <img src="img/iep_smaller.png" \alt>
+            </div>
+            <ul class="nav nav-justified" style="color:black">
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#/">ABOUT</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#entertainment">ENTERTAINMENT</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#setproductions">SET PRODUCTIONS</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#consultation">CONSULTATION</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#printing">PRINTING</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#clients">CLIENTS</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</nav>
+
+<div id="spacer"></div>
+<div hello></div>
+
+<div ng-view>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="col-md-12 col-sm-12 col-xs-12" id="contactText1">
+			<span>- Get in touch with us! -</span>
+		</div>
+        <div class="col-md-12 col-sm-12 col-xs-12 contactForm1">
+            <form class="form1" action="email.php" method="POST">
+                Name<br>
+                <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="name"><br><br>
+                Subject<br>
+                <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="subject"><br><br>
+                Your E-mail<br>
+                <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="email"><br><br>
+                Message<br>
+                <textarea class="col-md-4 col-sm-5 col-xs-12 msgBox1" type="text" name = "message"></textarea><br><br><br>
+                <button class="submitButton">Send</button>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div id="copyright">
+    <div class="container">
+        <span>Innovative Entertainment & Productions Inc. Copyright 2012</span>
+    </div>
+</div>
+
+
+
+<script>
+console.log("index.html");
+initSpacer();
+
+$(window).bind("load", function() {//wait for entire page to finish loading first, executes last
+   // code here
+   //initCardHeights();
+   //initSpacer();
+   console.log("index load ok");
+   if (window.innerWidth<=767){
+        initMobileFooter();
+    }
+    if (window.innerWidth>767){
+        initStandardFooter();
+    }
+});
+
+$( window ).resize(function() {//resize
+    initSpacer();
+    //initCardHeights();
+    if (window.innerWidth<=767){
+        initMobileFooter();
+    }
+    if (window.innerWidth>767){
+        initStandardFooter();
+        console.log("Test");
+        initSubSectionHeights();
+    }
+ });
+
+
+$(document).scroll(function() { 
+
+    if($(window).scrollTop() === 0) {
+        console.log("top");
+        document.getElementById("logo").style.display="block";
+        document.getElementById("nav").style.opacity="1";
+        initSpacer();
+    }
+    else{
+        document.getElementById("logo").style.display="none";
+        document.getElementById("nav").style.border="none";
+        document.getElementById("nav").style.opacity="0.7";
+    }
+});
+
+//set the height of spacer to height of navigation bar
+function initSpacer(){
+
+    if (window.innerWidth<=767){
+        document.getElementById("spacer").style.height = document.getElementById("collapsedNavbar").offsetHeight+"px";
+    }
+    else{
+        document.getElementById("spacer").style.height = document.getElementById("nav").offsetHeight+"px";
+    }
+    //console.log(document.getElementById("spacer").offsetHeight);
+}
+
+//collapse or expand mobile footers
+
+function initStandardFooter(){
+    var lists = document.getElementsByClassName("footerList");
+    var i;
+    for (i=0; i<lists.length; i++){
+        lists[i].style.display="block";
+    }
+}
+
+//initialize all footer lists to have no display.
+//  for some reason this is necessary for javascript.
+function initMobileFooter(){
+    var lists = document.getElementsByClassName("footerList");
+    var i;
+    for (i=0; i<lists.length; i++){
+        lists[i].style.display="none";
+    }
+}
+
+function toggleFooterList(id){
+    if (window.innerWidth>767){
+        return;
+    }
+    var lists = document.getElementsByClassName("footerList");
+    var element = document.getElementById(id);
+
+    if (document.getElementById(id).style.display==='none'){
+        document.getElementById(id).style.display="block";
+    }
+    else if (document.getElementById(""+id).style.display==="block"){
+        document.getElementById(id).style.display="none";
+    }
+}
+    
+function addFooter(){
+    var footer = document.getElementById("footer");
+    footer.style.display="block";
+    console.log("footer added");
+}
+    
+function test(){
+    console.log("scrolled");
+}
+
+</script>
+
+
+</body>
+
+
+
+</html>
