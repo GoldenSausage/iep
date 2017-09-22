@@ -47,6 +47,23 @@ body button {
 }
 .blur-5 {
   -webkit-filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+.darkBackground-1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2;
+}
+.introImage {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 }
 .start {
   height: 10px;
@@ -245,6 +262,10 @@ body button {
   padding: 50px 0px 50px 0px;
   text-shadow: 2px 2px black;
   z-index: 1;
+}
+.introText2 {
+  color: white;
+  font-size: 16px;
 }
 .intro2 {
   font-size: 40px;

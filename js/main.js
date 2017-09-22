@@ -14,7 +14,8 @@ app.config(function($routeProvider){
         templateUrl:"printing.html"
     })
     .when("/clients",{
-        templateUrl:"clients.html"
+        templateUrl:"clients.html",
+        controller:"mainCtrl"
     })
     .when("/contact",{
         templateUrl:"contact.html"
@@ -56,7 +57,7 @@ app.directive('cardheights', function ($timeout, $window){
                 scope.$apply();
             })*/
             
-            $timeout(initCardHeights,50);
+            $timeout(initCardHeights,100);
         }
     }
 })
@@ -71,7 +72,7 @@ app.directive('subSectionHeights', function ($timeout){
     return{
         templateUrl:"subSectionHeights.js.html",
         link:function(scope, elem, attrs){
-            $timeout(initSubSectionHeights,1000);
+            $timeout(initSubSectionHeights,10000);
         }
     }
 })

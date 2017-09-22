@@ -8,6 +8,7 @@ $( window ).resize(function() {
     initCardHeights();
  });
 
+
 //find the card height with the greatest height
 function getMaxCardHeight(){
     var cards = document.getElementsByClassName("serviceCard");
@@ -24,6 +25,7 @@ function getMaxCardHeight(){
 }
 
 function initCardHeights(){
+    console.log("first kill");
     var cards = document.getElementsByClassName("serviceCard");
     var cardLinks = document.getElementsByClassName("serviceCardLink");
     var i;

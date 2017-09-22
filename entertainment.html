@@ -7,17 +7,21 @@
 	</div>
 </div>
 
-<div>
-    <div>
+<div style="height:50px"></div>
+
+<div class="intro" style="height:300px; display:none">
+    
+    <div class="container" style="position:relative; z-index:4">
+        <span class="introText2" style="color:white; z-index:3">djkasdjkfkdsjkfljdkfjdsjfksdjgkjsgkdjgjkfdlgjkldfgjkldfsgjkldfgjkldfgjkdfjgkdsjkgjdfskgjkfldjdfklgjkdlfjgkldjgkdfjgkdsfgkjd;sjfkdsjfkljsdkvjdskfjkdsfjkldsjfkljvker kg ejkg jerklg ejkrel jkg ejvkek ejklvjrekjrrkljerjkleasl</span>
     </div>
     
-    <div class="container">
-    
+    <div class="darkBackground-1">
     </div>
+    <img class="introImage" src="img/novelty.jpg" \alt>
 
 </div>
 
-<div class="subSection" style="display:none">
+<div class="subSection" style="display:block">
 	<div class="container">
 		<div class="subHeader">
 			<span>Novel Experiences</span>
@@ -207,7 +211,7 @@
 
 <script>
 
-    initSpacer();
+    //initSpacer();
     
     var shift = 15, rep=10;
     var danceImages = document.getElementsByClassName("danceImageFrames");
@@ -218,6 +222,7 @@
     var z=1;
     
     initGalleries();
+    $('html,body').scrollTop(0);
     
     /*
     rotates images using animation

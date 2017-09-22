@@ -77,8 +77,8 @@
     </div>
 </nav>
 
-<div id="spacer"></div>
 <div hello></div>
+<div id="spacer"></div>
 
 <div ng-view>
 </div>
@@ -98,7 +98,7 @@
                 <input class="col-md-4 col-sm-5 col-xs-12 textBox1" type="text" name="email"><br><br>
                 Message<br>
                 <textarea class="col-md-4 col-sm-5 col-xs-12 msgBox1" type="text" name = "message"></textarea><br><br><br>
-                <button class="submitButton">Send</button>
+                <input class="submitButton" type="submit" value="Send">
 
             </form>
         </div>
@@ -139,8 +139,7 @@ $( window ).resize(function() {//resize
     }
     if (window.innerWidth>767){
         initStandardFooter();
-        console.log("Test");
-        initSubSectionHeights();
+        //initSubSectionHeights();
     }
  });
 
@@ -162,7 +161,7 @@ $(document).scroll(function() {
 
 //set the height of spacer to height of navigation bar
 function initSpacer(){
-
+    console.log("spacer loaded...");
     if (window.innerWidth<=767){
         document.getElementById("spacer").style.height = document.getElementById("collapsedNavbar").offsetHeight+"px";
     }
