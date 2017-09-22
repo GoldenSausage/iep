@@ -9,77 +9,17 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,900italic,900,800italic,800,700italic,700,600italic,600,500italic,500,400italic,100,100italic,200,200italic,300,300italic' rel='stylesheet' type='text/css'>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-
 </head>
 
 
-<body ng-app="iep" ng-controller="controller">
+<body ng-app="iep">
 
-
-
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav">
-    <div class="container" id="containerId">
-        <!--collapsed navbar-->
-        <div class="navbar-header visible-xs header" id="collapsedNavbar">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="toggleButton">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <img src="img/iep_smaller.png" id="collapsedLogo" \alt>
-        </div>
-
-        <!--uncollapsed navbar-->
-        <div class="collapse navbar-collapse" id="navItems">
-            <div id="logo">
-                <img src="img/iep_smaller.png" \alt>
-            </div>
-            <ul class="nav nav-justified" style="color:black">
-                <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#/">ABOUT</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#entertainment">ENTERTAINMENT</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#setproductions">SET PRODUCTIONS</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#consultation">CONSULTATION</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#printing">PRINTING</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#clients">CLIENTS</a>
-                </li>
-                <li>
-                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#contact">CONTACT</a>
-                </li>
-            </ul>
-        </div>
-
-
-    </div>
-</nav>
-
-<div id="spacer"></div>
-<div hello></div>
-
-<div ng-view>
-</div>
 
 <div id="footer">
     <div class="container">
@@ -154,12 +94,20 @@
 </div>
 
 
-<script src="js/main.js"></script>
+<div style="position:relative; top: 500px">
+    <header-navigation></header-navigation>
+    <app-body></app-body>
+
+</div>
+
+
+<!--<script src="js/main.js"></script>-->
+<script src="dist/bundle.js"></script>
 
 
 <script>
+
 console.log("index.html");
-initSpacer();
 
 $(window).bind("load", function() {//wait for entire page to finish loading first, executes last
    // code here
