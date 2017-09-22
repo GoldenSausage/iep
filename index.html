@@ -1,5 +1,6 @@
 <!doctype html>
-<html class="no-js" lang="" ng-app="myApp">
+
+<html class="no-js" lang="">
 <head>
     <title>Innovative Entertainment & Productions</title>
 
@@ -17,18 +18,15 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    
-    
-    
-    <script src="js/main.js"></script>
-    
-    
-</head>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-<body>
+
+</head>
+
+
+<body ng-app="iep" ng-controller="controller">
+
+
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="nav">
     <div class="container" id="containerId">
@@ -156,6 +154,8 @@
 </div>
 
 
+<script src="js/main.js"></script>
+
 
 <script>
 console.log("index.html");
@@ -188,7 +188,7 @@ $( window ).resize(function() {//resize
  });
 
 
-$(document).scroll(function() { 
+$(document).scroll(function() {
 
     if($(window).scrollTop() === 0) {
         console.log("top");
